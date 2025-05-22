@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+.pnpm-store/
+
+generated/
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+pnpm-lock.yaml
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Typescript compiled files
+dist/
+build/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*.local
+
+# Tests
+coverage/
+*.lcov
+
+# Miscellaneous
+temp/
+*.tmp
+
+.Trash-*/
