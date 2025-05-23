@@ -12,3 +12,20 @@ Within each main folder, you will find a `fluxo.drawio` file, which provides a f
 For example:
 
 ![Process Flow Example](image.png)
+
+Additionally, inside each folder you will also find another README file with more detailed information about the respective microservice.
+
+---
+
+## Running the Project with Docker Compose
+
+To easily run the entire infrastructure (Broker, Dispatcher, Postgres, and a local SQS mock), use the provided `docker-compose.yml`:
+
+1. Make sure you have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed.
+2. Place a valid `Dockerfile` in both the `broker` and `dispatcher` folders.
+3. In the project root, run:
+
+   ```bash
+   docker-compose up --build
+
+   
