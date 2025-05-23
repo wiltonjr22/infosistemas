@@ -65,10 +65,10 @@ export abstract class VehicleService {
     }
   }
 
-  protected async update(id: number, data: UpdateVehicleDto): Promise<void> {
+  protected async update(data: UpdateVehicleDto): Promise<void> {
     try {
       await this.prisma.vehicle.update({
-        where: { id },
+        where: { id: data.id },
         data,
       });
     } catch (error) {
