@@ -1,0 +1,57 @@
+version: "3.8"
+
+services:
+  broker:
+    build:
+      context: ./broker
+      dockerfile: Dockerfile
+    container_name: broker
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/vehicles
+      - AWS_SQS_ENDPOINT=http://sqs:9324
+    depends_on:
+      - db
+      - sqs
+
+  dispatcher:
+    build:
+      context: ./dispatcher
+      dockerfile: Dockerfile
+    container_name: dispatcher
+    ports:
+      - "3002:3000"
+    environment:
+      - NODE_ENV=development
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/vehicles
+      - AWS_SQS_ENDPOINT=http://sqs:9324
+    depends_on:
+      - db
+      - sqs
+
+  db:
+    image: postgres:15
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vehicles
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  sqs:
+    image: softwaremill/elasticmq:1.4.3
+    container_name: sqs
+    ports:
+      - "9324:9324"
+      - "9325:9325"
+    environment:
+      - ELASTICMQ_REST_PORT=9324
+
+volumes:
+  pgdata:
