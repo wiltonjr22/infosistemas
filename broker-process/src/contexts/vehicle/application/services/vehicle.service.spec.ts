@@ -3,7 +3,7 @@ import { PrismaService } from '@/resources/databases/prisma/prisma.service';
 import { AwsSqsService } from '@/resources/aws/aws-sqs.service';
 import { CreateInput } from '../../presentation/dtos/create.input';
 import { UpdateInput } from '../../presentation/dtos/update.input';
-import { VehicleEntity } from '../../commom/entitites/vehicle.entity';
+import { VehicleEntity } from '../../commom/entities/vehicle.entity';
 import { NotFoundException } from '@nestjs/common';
 
 jest.mock('../../commom/entitites/vehicle-create.input.entity');

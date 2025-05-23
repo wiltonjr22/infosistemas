@@ -12,7 +12,7 @@ import { ApiTags } from "@nestjs/swagger";
 import { UpdateInput } from "../dtos/update.input";
 import { CreateInput } from "../dtos/create.input";
 import { VehicleService } from "../../application/services/vehicle.service";
-import { VehicleEntity } from "../../commom/entitites/vehicle.entity";
+import { VehicleEntity } from "../../commom/entities/vehicle.entity";
 
 @ApiTags("Vehicles")
 @Controller("vehicles")

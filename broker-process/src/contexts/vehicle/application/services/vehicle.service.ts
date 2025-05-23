@@ -4,10 +4,10 @@ import { CreateInput } from "../../presentation/dtos/create.input";
 import { UpdateInput } from "../../presentation/dtos/update.input";
 import { PrismaService } from "@/resources/databases/prisma/prisma.service";
 import { AwsSqsService } from "@/resources/aws/aws-sqs.service";
-import { VehicleCreateInput } from "../../commom/entitites/vehicle-create.input.entity";
-import { VehicleUpdateInput } from "../../commom/entitites/vehicle-update.input.entity";
-import { VehicleRemoveInput } from "../../commom/entitites/vehicle-remove.input.entity";
-import { VehicleEntity } from "../../commom/entitites/vehicle.entity";
+import { VehicleCreateInput } from "../../commom/entities/vehicle-create.input.entity";
+import { VehicleUpdateInput } from "../../commom/entities/vehicle-update.input.entity";
+import { VehicleRemoveInput } from "../../commom/entities/vehicle-remove.input.entity";
+import { VehicleEntity } from "../../commom/entities/vehicle.entity";
 
 @Injectable()
 export class VehicleService implements IVehicleService {

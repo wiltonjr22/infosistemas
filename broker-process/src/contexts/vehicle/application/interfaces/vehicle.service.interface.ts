@@ -1,4 +1,4 @@
-import { VehicleEntity } from "../../commom/entitites/vehicle.entity";
+import { VehicleEntity } from "../../commom/entities/vehicle.entity";
 import { CreateInput } from "../../presentation/dtos/create.input";
 import { UpdateInput } from "../../presentation/dtos/update.input";
 

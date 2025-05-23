@@ -1,4 +1,4 @@
-import { VehicleFactoryEntity } from "../../commom/entitites/vehicle.entity";
+import { VehicleFactoryEntity } from "../../commom/entities/vehicle.entity";
 
 export class CreateInput extends VehicleFactoryEntity {
 }

@@ -2,7 +2,7 @@ import { VehicleController } from './vehicle.controller';
 import { VehicleService } from '../../application/services/vehicle.service';
 import { CreateInput } from '../dtos/create.input';
 import { UpdateInput } from '../dtos/update.input';
-import { VehicleEntity } from '../../commom/entitites/vehicle.entity';
+import { VehicleEntity } from '../../commom/entities/vehicle.entity';
 
 describe('VehicleController', () => {
   let controller: VehicleController;
