@@ -10,5 +10,4 @@ export const SQS_QUEUE_ENV_NAMES: Record<SqsQueueName, string> = {
   CREATE: "SQS_CREATE_QUEUE_URL",
   UPDATE: "SQS_UPDATE_QUEUE_URL",
   REMOVE: "SQS_REMOVE_QUEUE_URL",
-  // Add other queues as needed
 };
