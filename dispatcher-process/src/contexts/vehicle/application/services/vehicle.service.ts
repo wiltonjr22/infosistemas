@@ -49,6 +49,7 @@ export abstract class VehicleService {
 
   protected async create(data: CreateVehicleDto): Promise<void> {
     try {
+      await this.onModuleInit();
       await this.prisma.vehicle.create({
         data: {
           plate: data.plate,
@@ -67,6 +68,7 @@ export abstract class VehicleService {
 
   protected async update(data: UpdateVehicleDto): Promise<void> {
     try {
+      await this.onModuleInit();
       await this.prisma.vehicle.update({
         where: { id: data.id },
         data,
@@ -79,6 +81,7 @@ export abstract class VehicleService {
 
   protected async delete(id: number): Promise<void> {
     try {
+      await this.onModuleInit();
       await this.prisma.vehicle.update({
         where: { id },
         data: { isActive: 0 },

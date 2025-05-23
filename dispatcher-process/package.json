@@ -1,6 +1,6 @@
 {
   "name": "info-sistemas-broker",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "Application responsible for manage transaction assync messages",
   "private": true,
   "author": "",
