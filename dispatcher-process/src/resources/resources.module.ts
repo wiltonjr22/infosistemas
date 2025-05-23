@@ -6,4 +6,4 @@ import { DatabasesModule } from './databases/databases.module';
   imports: [AwsModule, DatabasesModule],
   exports: [AwsModule, DatabasesModule],
 })
-export class ResourcesModule { }
+export class ResourcesModule {}
