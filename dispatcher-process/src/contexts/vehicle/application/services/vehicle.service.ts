@@ -38,7 +38,7 @@ export abstract class VehicleService {
       );
       throw new Error(
         'Failed to establish database connection. ' +
-        (err.message || 'Unknown error'),
+          (err.message || 'Unknown error'),
       );
     }
   }

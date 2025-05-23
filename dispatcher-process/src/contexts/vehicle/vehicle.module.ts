@@ -17,4 +17,4 @@ import { VehicleProviders } from './commom/custom-providers/vehicle-providers';
     VehicleProviders.Vehicle_Update_SERVICE,
   ],
 })
-export class VehicleModule { }
+export class VehicleModule {}
